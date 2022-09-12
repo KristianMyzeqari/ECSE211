@@ -3,9 +3,9 @@ TestQ01,3,0,3,100.0,
 TestQ02,1,0,1,100.0,
 TestQ03,1,0,1,100.0,
 TestQ04,1,0,1,100.0,
-TestQ05,0,1,1,0.0,test_1: None != 10
-TestQ06,0,1,1,0.0,test_1: 0 != 825
-TestQ07,0,1,1,0.0,"test_1: Lists differ: [] != [0, -3, 6, -9]  Second list contains 4 additional elements. First extra element 0: 0  - [] + [0, -3, 6, -9]"
+TestQ05,1,0,1,100.0,
+TestQ06,1,0,1,100.0,
+TestQ07,0,1,1,0.0,test_1: 'tuple' object has no attribute 'append'
 TestQ08,1,2,3,33.33333333333333,"test_1: Lists differ: [] != [0, 5, 8]  Second list contains 3 additional elements. First extra element 0: 0  - [] + [0, 5, 8] ||| test_3: Lists differ: [] != [0]  Second list contains 1 additional elements. First extra element 0: 0  - [] + [0] ?  + "
 TestQ09,0,1,1,0.0,"test_1: Lists differ: [] != ['Calc 2', 'Physics', 'Algorithms']  Second list contains 3 additional elements. First extra element 0: 'Calc 2'  - [] + ['Calc 2', 'Physics', 'Algorithms']"
 TestQ10,0,3,3,0.0,test_1: unsupported operand type(s) for -: 'NoneType' and 'int' ||| test_2: unsupported operand type(s) for -: 'NoneType' and 'int' ||| test_3: unsupported operand type(s) for -: 'NoneType' and 'int'

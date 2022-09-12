@@ -38,7 +38,10 @@ def q4(x):
 
 def q5(x, y):
     """Write a function to represent the summation from the assignment doc"""
-    pass
+    result = 0
+    for x in range(y+1):
+        result = result + x
+    return result
 
 
 def q6(x):
@@ -47,7 +50,11 @@ def q6(x):
     Hint: You do not need to use the answer in q5 for this question.
     """
     result = 0
-    pass
+    i = 0
+    j = 0
+    for i in range(x+1):
+        for j in range(6):
+            result = result + (2*i + j)
     return result
 
 
@@ -67,9 +74,13 @@ def q7(x):
 
     """
     result = []
+    i=0
 
-    pass
-
+    for i in range(x):
+        if result.count == 0:
+            result[0] = ((-1)*i)*3
+        else:
+            result.append(((-1)*i)*3)
     return result
 
 
