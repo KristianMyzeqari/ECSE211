@@ -263,11 +263,15 @@ def q14(text: str):
     """
     output = []
     tempList = []
-    lineCount = 0;
     for i in text:
-        if i == "\n": 
-            lineCount = lineCount + 1
+        if i == '\n': 
             output.append(tempList)
             tempList = []
-        else: tempList.append(int(i))
+        else: 
+            if i != ',':
+                j = int(i)
+                tempList.append(j)
+    output.append(tempList)
+    print(output)
     return output
+q14('1,2,3\n4,5,6')
