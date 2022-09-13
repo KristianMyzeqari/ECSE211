@@ -176,9 +176,6 @@ def q11(x, y, z):
 
     return x/vectorLength, y/vectorLength, z/vectorLength
 
-q11(3, 4, 0)
-
-
 
 def q12(radius, degrees):
     """Write a funciton to convert the given Polar Coordinates into Cartesian Coordinates. 
@@ -201,7 +198,10 @@ def q12(radius, degrees):
     answer: (12.001732822468751, 4.9958391945774485)
 
     """
-    pass
+    angleInRadians = (degrees*2*math.pi)/360
+    x = radius*(math.cos(angleInRadians))
+    y = radius*(math.sin(angleInRadians))
+    return x, y
 
 
 def q13(data: list[list[int]]):
@@ -228,11 +228,13 @@ def q13(data: list[list[int]]):
     """
 
     result = ""
-
-    pass
-
+    for i in range (len(data)):
+        minimum = str(min(data[i]))
+        maximum = str(max(data[i]))
+        average = str(mean(data[i]))
+        medval = str(median(data[i]))
+        result = result + minimum + "," + maximum + "," + average + "," + medval + "\n"
     return result
-
 
 def q14(text: str):
     """Take the following string input and convert it into a 2-dimensional list. Such as:
@@ -253,14 +255,19 @@ def q14(text: str):
     * The numbers within the 2D list output must be of the int type, not the str type.
 
     Rules for Input Data:
-    * The input string will not have any spaces in it. 
+    * The input string will not have any spaces in it.
     * Each row is separated by a newline character.
     * There is no newline character at the end of the Input String.
-    * Each number is separated by a comma. 
+    * Each number is separated by a comma.
     * The numbers will all be integers within -2147483648 to 2147483647.
     """
     output = []
-
-    pass
-
+    tempList = []
+    lineCount = 0;
+    for i in text:
+        if i == "\n": 
+            lineCount = lineCount + 1
+            output.append(tempList)
+            tempList = []
+        else: tempList.append(int(i))
     return output
