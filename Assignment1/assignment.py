@@ -1,6 +1,7 @@
 """Replace the word 'pass' with your solution!"""
 
 from array import array
+from itertools import count
 import math
 from statistics import mean, median
 STUDENT_NAME = "Kristian Myzeqari"
@@ -74,13 +75,10 @@ def q7(x):
 
     """
     result = []
-    i=0
 
     for i in range(x):
-        if result.count == 0:
-            result[0] = ((-1)*i)*3
-        else:
-            result.append(((-1)*i)*3)
+
+        result.append(((-1)**i)*i*3)
     return result
 
 
@@ -106,9 +104,11 @@ def q8(lst):
     answer: []
     """
     result = []
+    count = 0
 
-    pass
-
+    for i in range(len(lst)):
+        if lst[i] == 10:
+            result.append(i)
     return result
 
 
@@ -133,18 +133,23 @@ def q9(dct):
     result = []
     gpa = 0
     
-    pass
+    keys = list(dct.keys())
+    values = list(dct.values())
+    count = 0
 
-    return result, gpa
-
+    for i in range(len(values)):
+        count += values[i]
+    return keys, count/len(values)
 
 def q10(x):
     """Create a function that performs the following operations on the given input x:
     if x less than 5 or greater than 255, return 0
     if x is between 5 and 255 (inclusive), return x divided by 1.25 (floating-point division)
     """
-    pass
-
+    if x<5 or x>=256:
+        return 0
+    else:
+        return x/1.25
 
 def q11(x, y, z):
     """Create a function that performs vector normalization on the 3D vector <x, y, z>
@@ -165,7 +170,14 @@ def q11(x, y, z):
     input: [0, 100, 0]
     answer: [0, 1, 0]
     """
-    pass
+    vectorLength = math.sqrt((x**2)+(y**2)+(z**2))
+    print(vectorLength)
+    print(x/vectorLength)
+
+    return x/vectorLength, y/vectorLength, z/vectorLength
+
+q11(3, 4, 0)
+
 
 
 def q12(radius, degrees):
