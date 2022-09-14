@@ -274,4 +274,3 @@ def q14(text: str):
     output.append(tempList)
     print(output)
     return output
-q14('1,2,3\n4,5,6')
